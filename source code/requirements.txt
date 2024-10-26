@@ -1,3 +1,7 @@
 flask
 Gunicorn
+<<<<<<< HEAD
 nltk
+=======
+nltk
+>>>>>>> a952d064dc6e34df883f9cbfc88b8ad1ffb0e499
