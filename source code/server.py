@@ -48,4 +48,4 @@ def hello_world():
     return render_template("displayTable.html", tweet_list=finList)
 
 
-app.run()
+# app.run()
