@@ -1,0 +1,4 @@
+flask
+Gunicorn
+nltk
+math
