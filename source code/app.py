@@ -48,4 +48,7 @@ def hello_world():
     return render_template("displayTable.html", tweet_list=finList)
 
 
+if _name_ == '__main__':
+    app.run(port=5001)
+
 # app.run()
