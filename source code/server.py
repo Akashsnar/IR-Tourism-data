@@ -2,15 +2,23 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import main
+import json
 from preprocess import importTweets,lengthOfDocument, returnDocs, tweetdict
 app = Flask(__name__)
 
 
-datas = importTweets()
-index=main.once(datas)
+# datas = importTweets()
+# index=main.once(datas)
+# document_length=lengthOfDocument(index, datas)
 
 
-document_length=lengthOfDocument(index, datas)
+with open("datas.json") as f:
+    datas = json.load(f)
+with open("index.json") as f:
+    index = json.load(f)
+with open("document_length.json") as f:
+    document_length = json.load(f)
+
 
 @app.route("/")
 def home():

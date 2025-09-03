@@ -2,16 +2,11 @@ from preprocess import importQuery, importTweets, buildIndex, lengthOfDocument, 
 from results import retrieve
 from write import resultFileCreation
 import nltk
+import json
 
-
-nltk.download('stopwords')
-
-
-nltk.download('punkt')
-
-
-
-nltk.download('punkt_tab')
+# nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('punkt_tab')
 
 
 def once(tweets):
@@ -54,4 +49,15 @@ def evaluate(index, tweets, document_length, query=""):
 
 
 if __name__ == "__main__":
+    datas = importTweets()
+    index = once(datas)
+    document_length = lengthOfDocument(index, datas)
+
+    # Save to JSON
+    with open("index.json", "w") as f:
+        json.dump(index, f)
+    with open("document_length.json", "w") as f:
+        json.dump(document_length, f)
+    with open("datas.json", "w") as f:
+        json.dump(datas, f)
     evaluate()
