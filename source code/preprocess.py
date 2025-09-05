@@ -16,6 +16,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 NLTK_PATH = os.path.join(BASE_DIR, "..", "nltk_data")
 nltk.data.path.append(NLTK_PATH)
 
+print("NLTK search paths:", nltk.data.path)
 
 ps = PorterStemmer()
 
