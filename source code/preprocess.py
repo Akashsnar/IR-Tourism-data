@@ -7,6 +7,11 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
+import nltk
+import os
+
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+
 ps = PorterStemmer()
 
 

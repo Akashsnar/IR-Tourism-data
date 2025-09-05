@@ -1,7 +1,6 @@
 from preprocess import importQuery, importTweets, buildIndex, lengthOfDocument, tweetdict, returnDocs
 from results import retrieve
 from write import resultFileCreation
-import nltk
 import json
 
 # nltk.download('stopwords')
