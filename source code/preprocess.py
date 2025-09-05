@@ -10,7 +10,12 @@ from nltk.corpus import stopwords
 import nltk
 import os
 
-nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+
+# force NLTK to look in ../nltk_data relative to this file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+NLTK_PATH = os.path.join(BASE_DIR, "..", "nltk_data")
+nltk.data.path.append(NLTK_PATH)
+
 
 ps = PorterStemmer()
 
